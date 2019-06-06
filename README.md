@@ -1,4 +1,4 @@
-# algoholism [![Build Status](https://travis-ci.org/kubk/algolizm.svg?branch=master)](https://travis-ci.org/kubk/algolizm) 
+# algoholizm [![Build Status](https://travis-ci.org/kubk/algoholizm.svg?branch=master)](https://travis-ci.org/kubk/algoholizm) 
 
 Algorithms and Data Structures implemented in TypeScript using TDD.
 
