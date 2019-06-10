@@ -1,4 +1,4 @@
-import { Stack } from "./stack";
+import { Stack, StackOverflow } from "./stack";
 
 describe("Stack", () => {
   it("is empty by default", () => {
@@ -11,7 +11,11 @@ describe("Stack", () => {
     expect(stack.isFull()).toBeFalsy();
     stack.push(1);
     stack.push(2);
+
     expect(stack.isFull()).toBeTruthy();
+    expect(() => {
+      stack.push(3);
+    }).toThrow(StackOverflow);
   });
 
   it("can pop", () => {

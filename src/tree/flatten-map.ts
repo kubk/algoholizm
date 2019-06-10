@@ -37,7 +37,7 @@ const showPaths = (tree: Tree, path: string[], map: FlatMap) => {
   }
 };
 
-export const flattenTree = (tree: Tree): FlatMap => {
+export const flattenMap = (tree: Tree): FlatMap => {
   const map = {};
   showPaths(tree, [], map);
   return map;

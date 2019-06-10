@@ -1,20 +1,20 @@
-import { Node, visit } from "./linked-list";
+import { Node, visit, visitReverse } from "./linked-list";
 
 describe("LinkedList", () => {
-  it("allows to visit recursively", () => {
-    const node = {
-      value: "a",
+  const node = {
+    value: "a",
+    next: {
+      value: "b",
       next: {
-        value: "b",
+        value: "c",
         next: {
-          value: "c",
-          next: {
-            value: "x"
-          }
+          value: "x"
         }
       }
-    };
+    }
+  };
 
+  it("allows to visit recursively", () => {
     let str = "";
     const visitor = (node: Node<string>) => {
       str += node.value;
@@ -23,5 +23,16 @@ describe("LinkedList", () => {
     visit(node, visitor);
 
     expect(str).toBe("abcx");
+  });
+
+  it("allows to visit recursively in reverse direction", () => {
+    let str = "";
+    const visitor = (node: Node<string>) => {
+      str += node.value;
+    };
+
+    visitReverse(node, visitor);
+
+    expect(str).toBe("xcba");
   });
 });

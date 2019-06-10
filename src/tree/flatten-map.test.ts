@@ -1,8 +1,8 @@
-import { flattenTree } from "./flatten-tree";
+import { flattenMap } from "./flatten-map";
 
-describe("flattenTree", () => {
-  it("should flat a tree", () => {
-    const input = {
+describe("flattenMap", () => {
+  it("should create flatten map from a tree", () => {
+    const tree = {
       a: {
         b: {
           c: 12,
@@ -18,6 +18,6 @@ describe("flattenTree", () => {
       "a/e": [1, 2, 3]
     };
 
-    expect(flattenTree(input)).toStrictEqual(output);
+    expect(flattenMap(tree)).toStrictEqual(output);
   });
 });
