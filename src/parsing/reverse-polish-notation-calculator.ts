@@ -29,22 +29,23 @@ const isOperator = (value: any): value is Operator => {
   return operators.includes(value);
 };
 
+const isFloat = (value: any) => !!(value % 1);
 const isOperand = (value: any): value is Operand => {
-  return Number.isInteger(value);
+  return Number.isInteger(value) || isFloat(value);
 };
 
-export const calc = (rpn: string): number => {
+export const evaluateReversePolishNotation = (rpn: string): number => {
   const lexemes = lex(rpn);
   const stack: Lexeme[] = [];
   lexemes.forEach(lexeme => {
     if (isOperator(lexeme)) {
       const operation = operations[lexeme];
       const right = stack.pop();
-      if (!right || !isOperand(right)) {
+      if (right === undefined || !isOperand(right)) {
         throw new Error("Invalid operand: " + right);
       }
       const left = stack.pop();
-      if (!left || !isOperand(left)) {
+      if (left === undefined || !isOperand(left)) {
         throw new Error("Invalid operand: " + left);
       }
       const result = operation(left, right);
@@ -64,14 +65,17 @@ export const calc = (rpn: string): number => {
   return evaluated;
 };
 
-const lex = (rpn: string): Lexeme[] => {
-  return rpn.split(" ").map(token => {
-    if (isOperator(token)) {
-      return token;
-    }
-    if (!isNaN(parseFloat(token))) {
-      return Number.parseInt(token);
-    }
-    throw new Error("Invalid token: " + token);
-  });
+const lex = (expression: string): Lexeme[] => {
+  return expression
+    .split(/(\s+|\(|\))/gi)
+    .filter(token => token !== "" && token !== " ")
+    .map(token => {
+      if (isOperator(token)) {
+        return token;
+      }
+      if (!isNaN(parseFloat(token))) {
+        return Number.parseFloat(token);
+      }
+      throw new Error("Invalid token: " + token);
+    });
 };
