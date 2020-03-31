@@ -14,30 +14,30 @@
  Keys can be any string of characters, excluding the '/' character.
 */
 
-interface Tree {
-  [key: string]: any;
-}
-
-interface FlatMap {
-  [key: string]: any;
-}
-
-const isAssocArray = (value: any): boolean => {
-  return Object.prototype.toString.call(value) === "[object Object]";
+type Tree<T> = {
+  [key: string]: T | Tree<T>;
 };
 
-const showPaths = (tree: Tree, path: string[], map: FlatMap) => {
-  if (!isAssocArray(tree)) {
-    map[path.join("/")] = tree;
+type FlatMap<T> = {
+  [key: string]: T;
+};
+
+const isTree = <T>(value: Tree<T> | T): value is Tree<T> => {
+  return Object.prototype.toString.call(value) === '[object Object]';
+};
+
+const showPaths = <T>(tree: Tree<T> | T, path: string[], map: FlatMap<T>) => {
+  if (!isTree(tree)) {
+    map[path.join('/')] = tree;
     return;
   }
 
-  for (const nodeName in tree) {
-    showPaths(tree[nodeName], path.concat(nodeName), map);
-  }
+  Object.entries(tree).forEach(([key, value]) => {
+    showPaths(value, path.concat(key), map);
+  });
 };
 
-export const flattenMap = (tree: Tree): FlatMap => {
+export const flattenMap = <T>(tree: Tree<T> | T): FlatMap<T> => {
   const map = {};
   showPaths(tree, [], map);
   return map;
