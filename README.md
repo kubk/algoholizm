@@ -48,3 +48,7 @@ Algorithms and Data Structures implemented in TypeScript using TDD.
   * [vector-2d.test.ts](src/vector/vector-2d.test.ts)
   * [vector-3d.test.ts](src/vector/vector-3d.test.ts)
   * [vector-3d.ts](src/vector/vector-3d.ts)
+* [bitwise operators](src/bitwise-operators)
+  * [bitwise-number.test.ts](src/bitwise-operators/bitwise-number.test.ts)
+  * [bitwise-number.ts](src/bitwise-operators/bitwise-number.ts)
+
