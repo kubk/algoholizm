@@ -12,6 +12,9 @@ const reverseString = (string: string) => string.split('').reverse().join('');
 export class BitwiseNumber {
   constructor(public string: string) {
     assert(string.length === 32, `Expected 32, given ${string.length}`);
+    string.split('').forEach((sign) => {
+      assert(sign === '0' || sign === '1', `Invalid bit sequence: ${string}`);
+    });
   }
 
   add(other: BitwiseNumber): BitwiseNumber {
@@ -21,13 +24,15 @@ export class BitwiseNumber {
     for (let i = 31; i >= 0; i--) {
       const thisBit = parseInt(this.string[i], 10);
       const otherBit = parseInt(other.string[i], 10);
-      if (thisBit === 1 && otherBit === 1) {
-        string = (unit ? '1' : '0') + string;
-        unit = 1;
-      } else {
-        string = thisBit + otherBit + unit + string;
-        unit = 0;
+
+      const sum = thisBit + otherBit + unit;
+      if (sum === 0 || sum === 2) {
+        string = '0' + string;
       }
+      if (sum === 1 || sum === 3) {
+        string = '1' + string;
+      }
+      unit = sum > 1 ? 1 : 0;
     }
 
     return new BitwiseNumber(string);
@@ -96,7 +101,7 @@ export class BitwiseNumber {
       const a = this.string[i];
       const b = other.string[i];
 
-      const matchingRow = truthTable.find(row => row[0] === a && row[1] === b);
+      const matchingRow = truthTable.find((row) => row[0] === a && row[1] === b);
       assert(matchingRow);
 
       string += matchingRow[2];
@@ -109,13 +114,25 @@ export class BitwiseNumber {
     let string = '';
 
     for (let i = 0; i < 32; i++) {
-      string += (this.string[i] === '1' ? '0' : '1');
+      string += this.string[i] === '1' ? '0' : '1';
     }
 
     return new BitwiseNumber(string).add(new BitwiseNumber('00000000000000000000000000000001'));
   }
 
-  isTruthy() {
+  isTruthy(): boolean {
     return this.string !== '00000000000000000000000000000000';
+  }
+
+  shiftLeft(bitCount: number): BitwiseNumber {
+    const string = this.string.slice(bitCount).padEnd(32, '0');
+
+    return new BitwiseNumber(string);
+  }
+
+  shiftRight(bitCount: number): BitwiseNumber {
+    const string = this.string.slice(0, -bitCount).padStart(32, '0');
+
+    return new BitwiseNumber(string);
   }
 }
