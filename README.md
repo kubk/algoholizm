@@ -51,4 +51,11 @@ Algorithms and Data Structures implemented in TypeScript using TDD.
 * [bitwise operators](src/bitwise-operators)
   * [bitwise-number.test.ts](src/bitwise-operators/bitwise-number.test.ts)
   * [bitwise-number.ts](src/bitwise-operators/bitwise-number.ts)
+  * [bit-operations.ts](src/bitwise-operators/bit-operations.ts)
+  * [bit-operations.test.ts](src/bitwise-operators/bit-operations.test.ts)
+* [crypto](src/crypto)
+  * [caesar-cipher.ts](src/crypto/caesar-cipher.ts)
+  * [caesar-cipher.test.ts](src/crypto/caesar-cipher.test.ts)
+  * [vernam-cipher.ts](src/crypto/vernam-cipher.ts)
+  * [vernam-cipher.test.ts](src/crypto/vernam-cipher.test.ts)
 

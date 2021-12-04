@@ -1,6 +1,6 @@
-import { clearBit, countBits, setBit, toggleBit } from './bit-operators';
+import { clearBit, countBits, setBit, toggleBit } from './bit-operations';
 
-describe('bit operators', () => {
+describe('bit operations', () => {
   it('setBit', () => {
     expect(setBit(0b100, 1)).toBe(0b110);
     expect(setBit(0b100, 2)).toBe(0b100);
