@@ -6,16 +6,16 @@ describe('flattenMap', () => {
       a: {
         b: {
           c: '12',
-          d: 'Hello World'
+          d: 'Hello World',
         },
-        e: ['1', '2', '3']
-      }
+        e: ['1', '2', '3'],
+      },
     };
 
     const output = {
       'a/b/c': '12',
       'a/b/d': 'Hello World',
-      'a/e': ['1', '2', '3']
+      'a/e': ['1', '2', '3'],
     };
 
     // @ts-expect-error

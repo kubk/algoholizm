@@ -1,7 +1,7 @@
-const operators = <const>["+", "-", "*", "/"];
+const operators = <const>['+', '-', '*', '/'];
 type Operator = typeof operators[number];
 type Operand = number;
-const parenthesis = <const>["(", ")"];
+const parenthesis = <const>['(', ')'];
 type Parenthesis = typeof parenthesis[number];
 type Lexeme = Operator | Operand | Parenthesis;
 
@@ -26,10 +26,10 @@ class Stack<Item> {
 }
 
 const precedence: { [key in Operator]: number } = {
-  "*": 3,
-  "/": 3,
-  "+": 2,
-  "-": 2
+  '*': 3,
+  '/': 3,
+  '+': 2,
+  '-': 2,
 };
 
 const isOperator = (value: any): value is Operator => {
@@ -48,15 +48,15 @@ const isParenthesis = (value: any): value is Parenthesis => {
 const lex = (expression: string): Lexeme[] => {
   return expression
     .split(/(\s+|\(|\))/gi)
-    .filter(token => token !== "" && token !== " ")
-    .map(token => {
+    .filter((token) => token !== '' && token !== ' ')
+    .map((token) => {
       if (isOperator(token) || isParenthesis(token)) {
         return token;
       }
       if (!isNaN(parseFloat(token))) {
         return Number.parseFloat(token);
       }
-      throw new Error("Invalid token: " + token);
+      throw new Error('Invalid token: ' + token);
     });
 };
 
@@ -64,30 +64,30 @@ export const shuntingYard = (expression: string): string => {
   const outputQueue: Lexeme[] = [];
   const operatorStack = new Stack<Operator | Parenthesis>();
   const lexemes = lex(expression);
-  lexemes.forEach(lexeme => {
+  lexemes.forEach((lexeme) => {
     if (isOperand(lexeme)) {
       outputQueue.push(lexeme);
     }
 
-    if (lexeme === "(") {
+    if (lexeme === '(') {
       operatorStack.push(lexeme);
     }
 
-    if (lexeme === ")") {
+    if (lexeme === ')') {
       if (!operatorStack.peek()) {
-        throw new Error("Parenthesis mismatch");
+        throw new Error('Parenthesis mismatch');
       }
       let openParenthesisFound = false;
       while (!operatorStack.empty()) {
         const prevOperator = operatorStack.pop()!;
-        if (prevOperator === "(") {
+        if (prevOperator === '(') {
           openParenthesisFound = true;
         } else {
           outputQueue.push(prevOperator);
         }
       }
       if (!openParenthesisFound) {
-        throw new Error("Open parenthesis not found");
+        throw new Error('Open parenthesis not found');
       }
     }
 
@@ -111,10 +111,10 @@ export const shuntingYard = (expression: string): string => {
   while (!operatorStack.empty()) {
     const operator = operatorStack.pop()!;
     if (isParenthesis(operator)) {
-      throw new Error("Parenthesis mismatch");
+      throw new Error('Parenthesis mismatch');
     }
     outputQueue.push(operator);
   }
 
-  return outputQueue.join(" ");
+  return outputQueue.join(' ');
 };

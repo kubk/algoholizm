@@ -30,7 +30,7 @@ export const solveGraph = (
       if (edge.end === end) {
         return true;
       }
-      if (!visited.find(edge => edge.start === start && edge.end === end)) {
+      if (!visited.find((edge) => edge.start === start && edge.end === end)) {
         visited.push({ start: start, end: end });
         const found = solveGraph(edge.end, end, graph, visited);
         if (found) {

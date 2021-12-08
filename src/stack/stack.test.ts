@@ -1,12 +1,12 @@
-import { Stack, StackOverflow } from "./stack";
+import { Stack, StackOverflow } from './stack';
 
-describe("Stack", () => {
-  it("is empty by default", () => {
+describe('Stack', () => {
+  it('is empty by default', () => {
     const stack = new Stack(5);
     expect(stack.isEmpty()).toBeTruthy();
   });
 
-  it("can be full", () => {
+  it('can be full', () => {
     const stack = new Stack(2);
     expect(stack.isFull()).toBeFalsy();
     stack.push(1);
@@ -18,7 +18,7 @@ describe("Stack", () => {
     }).toThrow(StackOverflow);
   });
 
-  it("can pop", () => {
+  it('can pop', () => {
     const stack = new Stack(2);
     stack.push(1);
     stack.push(2);
@@ -26,7 +26,7 @@ describe("Stack", () => {
     expect(stack.pop()).toBe(1);
   });
 
-  it("allows peek current element", () => {
+  it('allows peek current element', () => {
     const stack = new Stack(2);
     stack.push(1);
     stack.push(2);

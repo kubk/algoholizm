@@ -5,6 +5,6 @@ describe('Caesar cipher', () => {
     expect(caesarCipherEncrypt('AAB', 3)).toBe('DDE');
     expect(caesarCipherDecrypt('DDE', 3)).toBe('AAB');
     expect(caesarCipherEncrypt('ZAB', 3)).toBe('CDE');
-    expect(caesarCipherEncrypt('ZZZAAA', 2)).toBe('BBBCCC');
-  })
-})
+    expect(caesarCipherDecrypt('CDE', 3)).toBe('ZAB');
+  });
+});

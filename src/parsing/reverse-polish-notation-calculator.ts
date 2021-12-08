@@ -12,17 +12,17 @@
  You may assume that there won't be exceptional situations (like stack underflow or division by zero).
  */
 
-const operators = <const>["+", "-", "*", "/"];
+const operators = <const>['+', '-', '*', '/'];
 type Operator = typeof operators[number];
 type Operand = number;
 type Operation = (a: Operand, b: Operand) => Operand;
 type Lexeme = Operator | Operand;
 
 const operations: { [key in Operator]: Operation } = {
-  "+": (a, b) => a + b,
-  "-": (a, b) => a - b,
-  "*": (a, b) => a * b,
-  "/": (a, b) => a / b
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
+  '/': (a, b) => a / b,
 };
 
 const isOperator = (value: any): value is Operator => {
@@ -37,16 +37,16 @@ const isOperand = (value: any): value is Operand => {
 export const evaluateReversePolishNotation = (rpn: string): number => {
   const lexemes = lex(rpn);
   const stack: Lexeme[] = [];
-  lexemes.forEach(lexeme => {
+  lexemes.forEach((lexeme) => {
     if (isOperator(lexeme)) {
       const operation = operations[lexeme];
       const right = stack.pop();
       if (right === undefined || !isOperand(right)) {
-        throw new Error("Invalid operand: " + right);
+        throw new Error('Invalid operand: ' + right);
       }
       const left = stack.pop();
       if (left === undefined || !isOperand(left)) {
-        throw new Error("Invalid operand: " + left);
+        throw new Error('Invalid operand: ' + left);
       }
       const result = operation(left, right);
       stack.push(result);
@@ -56,11 +56,11 @@ export const evaluateReversePolishNotation = (rpn: string): number => {
     }
   });
   const evaluated = stack.pop();
-  if (typeof evaluated === "undefined") {
-    throw new Error("Invalid expression");
+  if (typeof evaluated === 'undefined') {
+    throw new Error('Invalid expression');
   }
   if (isOperator(evaluated)) {
-    throw new Error("Invalid expression");
+    throw new Error('Invalid expression');
   }
   return evaluated;
 };
@@ -68,14 +68,14 @@ export const evaluateReversePolishNotation = (rpn: string): number => {
 const lex = (expression: string): Lexeme[] => {
   return expression
     .split(/(\s+|\(|\))/gi)
-    .filter(token => token !== "" && token !== " ")
-    .map(token => {
+    .filter((token) => token !== '' && token !== ' ')
+    .map((token) => {
       if (isOperator(token)) {
         return token;
       }
       if (!isNaN(parseFloat(token))) {
         return Number.parseFloat(token);
       }
-      throw new Error("Invalid token: " + token);
+      throw new Error('Invalid token: ' + token);
     });
 };

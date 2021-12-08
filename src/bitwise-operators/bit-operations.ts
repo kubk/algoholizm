@@ -23,8 +23,8 @@ export const countBits = (number: number) => {
 
 export const isEven = (number: number) => {
   return (number & 1) === 0;
-}
+};
 
 export const isOdd = (number: number) => {
   return (number & 1) === 1;
-}
+};

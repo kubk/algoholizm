@@ -5,5 +5,5 @@
 */
 
 export const runLengthEncoding = (str: string): [number, string][] => {
-  return (str.match(/(.)\1*/g) || []).map(x => [x.length, x[0]]);
+  return (str.match(/(.)\1*/g) || []).map((x) => [x.length, x[0]]);
 };
