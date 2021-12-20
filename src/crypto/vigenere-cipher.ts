@@ -1,4 +1,5 @@
 import { assert } from 'ts-essentials';
+import { mod } from './mod';
 
 // Alphabet is 26 upper cased latin letters. Char codes from 65 to 90
 const CHAR_CODE_FROM = 65;
@@ -12,7 +13,7 @@ export const vigenereCipherEncrypt = (plainText: string, key: string) => {
     .map((letter, i) => {
       const plainTextCode = letter.charCodeAt(0) - CHAR_CODE_FROM;
       const keyCode = key[i].charCodeAt(0) - CHAR_CODE_FROM;
-      return String.fromCharCode(((plainTextCode + keyCode) % ALPHABET_SIZE) + CHAR_CODE_FROM);
+      return String.fromCharCode(mod(plainTextCode + keyCode, ALPHABET_SIZE) + CHAR_CODE_FROM);
     })
     .join('');
 };
@@ -25,11 +26,7 @@ export const vigenereCipherDecrypt = (cipherText: string, key: string) => {
     .map((letter, i) => {
       const cipherCode = letter.charCodeAt(0) - CHAR_CODE_FROM;
       const keyCode = key[i].charCodeAt(0) - CHAR_CODE_FROM;
-      let difference = cipherCode - keyCode;
-      if (difference < 0) {
-        difference += ALPHABET_SIZE;
-      }
-      return String.fromCharCode((difference % ALPHABET_SIZE) + CHAR_CODE_FROM);
+      return String.fromCharCode(mod(cipherCode - keyCode, ALPHABET_SIZE) + CHAR_CODE_FROM);
     })
     .join('');
 };
