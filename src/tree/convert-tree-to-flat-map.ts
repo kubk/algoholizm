@@ -37,7 +37,7 @@ const showPaths = <T>(tree: Tree<T> | T, path: string[], map: FlatMap<T>) => {
   });
 };
 
-export const flattenMap = <T>(tree: Tree<T> | T): FlatMap<T> => {
+export const convertTreeToFlatMap = <T>(tree: Tree<T> | T): FlatMap<T> => {
   const map = {};
   showPaths(tree, [], map);
   return map;

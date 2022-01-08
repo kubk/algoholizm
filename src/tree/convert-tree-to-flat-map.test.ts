@@ -1,6 +1,6 @@
-import { flattenMap } from './flatten-map';
+import { convertTreeToFlatMap } from './convert-tree-to-flat-map';
 
-describe('flattenMap', () => {
+describe('convertTreeToFlatMap', () => {
   it('should create flatten map from a tree', () => {
     const tree = {
       a: {
@@ -19,6 +19,6 @@ describe('flattenMap', () => {
     };
 
     // @ts-expect-error
-    expect(flattenMap(tree)).toStrictEqual(output);
+    expect(convertTreeToFlatMap(tree)).toStrictEqual(output);
   });
 });
