@@ -44,6 +44,8 @@ Algorithms and Data Structures implemented in TypeScript using TDD.
 * [recursion](src/recursion)
   * [fibonacci.test.ts](src/recursion/fibonacci.test.ts)
   * [fibonacci.ts](src/recursion/fibonacci.ts)
+  * [sum-up-to.test.ts](src/recursion/sum-up-to.test.ts)
+  * [sum-up-to.ts](src/recursion/sum-up-to.ts)
 * [search](src/search)
   * [binary-search.test.ts](src/search/binary-search.test.ts)
   * [binary-search.ts](src/search/binary-search.ts)
