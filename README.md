@@ -70,4 +70,14 @@ Algorithms and Data Structures implemented in TypeScript using TDD.
 * [list](src/list)
   * [linked-list.test.ts](src/list/linked-list.test.ts)
   * [linked-list.ts](src/list/linked-list.ts)
+* [spaced repetition algorithms](src/spaced-repetition)
+  * [generate-leitner-boxes.test.ts](src/spaced-repetition/generate-leitner-boxes.test.ts)
+  * [generate-leitner-boxes.ts](src/spaced-repetition/generate-leitner-boxes.ts)
+  * [generate-leitner-cli-schedule.test.ts](src/spaced-repetition/generate-leitner-cli-schedule.test.ts)
+  * [generate-leitner-cli-schedule.ts](src/spaced-repetition/generate-leitner-cli-schedule.ts)
+  * [range.ts](src/spaced-repetition/range.ts)
+  * [range.test.ts](src/spaced-repetition/range.test.ts)
+  * [generate-leitner-matrix-schedule.test.ts](src/spaced-repetition/generate-leitner-matrix-schedule.test.ts)
+  * [generate-leitner-matrix-schedule.ts](src/spaced-repetition/generate-leitner-matrix-schedule.ts)
+
 
