@@ -79,5 +79,8 @@ Algorithms and Data Structures implemented in TypeScript using TDD.
   * [range.test.ts](src/spaced-repetition/range.test.ts)
   * [generate-leitner-matrix-schedule.test.ts](src/spaced-repetition/generate-leitner-matrix-schedule.test.ts)
   * [generate-leitner-matrix-schedule.ts](src/spaced-repetition/generate-leitner-matrix-schedule.ts)
+* [modulo](src/modulo)
+  * [get-spreadsheet-column-name.ts](src/modulo/get-spreadsheet-column-name.ts)
+  * [get-spreadsheet-column-name.test.ts](src/modulo/get-spreadsheet-column-name.test.ts)
 
 
