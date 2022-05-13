@@ -18,10 +18,9 @@ export class BigInteger {
     }
 
     if (carry > 0) {
-      result.unshift(carry)
+      result.unshift(carry);
     }
 
     return new BigInteger(result);
   }
 }
-

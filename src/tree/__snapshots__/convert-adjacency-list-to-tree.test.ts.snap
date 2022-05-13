@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`convertAdjacencyListToTree converts null|string ids 1`] = `
+Array [
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [
+          Object {
+            "children": Array [],
+            "id": "3",
+            "name": "Phonedo - A - A",
+          },
+          Object {
+            "children": Array [],
+            "id": "7",
+            "name": "Phonedo - A - B",
+          },
+        ],
+        "id": "2",
+        "name": "Phonedo - A",
+      },
+      Object {
+        "children": Array [],
+        "id": "4",
+        "name": "Phonedo - B",
+      },
+      Object {
+        "children": Array [],
+        "id": "6",
+        "name": "Phonedo - C",
+      },
+    ],
+    "id": "1",
+    "name": "Phonedo",
+  },
+]
+`;
+
+exports[`convertAdjacencyListToTree converts number ids 1`] = `
+Array [
+  Object {
+    "children": Array [
+      Object {
+        "children": Array [
+          Object {
+            "children": Array [],
+            "id": 3,
+            "name": "Phonedo - A - A",
+          },
+          Object {
+            "children": Array [],
+            "id": 7,
+            "name": "Phonedo - A - B",
+          },
+        ],
+        "id": 2,
+        "name": "Phonedo - A",
+      },
+      Object {
+        "children": Array [],
+        "id": 4,
+        "name": "Phonedo - B",
+      },
+      Object {
+        "children": Array [],
+        "id": 6,
+        "name": "Phonedo - C",
+      },
+    ],
+    "id": 1,
+    "name": "Phonedo",
+  },
+]
+`;

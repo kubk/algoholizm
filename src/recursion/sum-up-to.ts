@@ -3,4 +3,4 @@ export const sumUpTo = (n: number): number => {
     return 0;
   }
   return n + sumUpTo(n - 1);
-}
+};

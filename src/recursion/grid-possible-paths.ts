@@ -8,4 +8,4 @@ export const gridPossiblePaths = (n: number, m: number): number => {
     return 1;
   }
   return gridPossiblePaths(n - 1, m) + gridPossiblePaths(n, m - 1);
-}
+};
