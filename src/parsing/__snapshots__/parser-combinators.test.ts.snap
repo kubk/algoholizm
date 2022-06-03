@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`integration - simple HTML parser 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        "aaa",
+      ],
+      "tag": "h1",
+    },
+    Array [
+      Object {
+        "children": Array [
+          "bb",
+        ],
+        "tag": "p",
+      },
+      Array [
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                "c",
+              ],
+              "tag": "span",
+            },
+          ],
+          "tag": "div",
+        },
+      ],
+    ],
+  ],
+  "tag": "div",
+}
+`;
