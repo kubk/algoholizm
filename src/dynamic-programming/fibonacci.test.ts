@@ -1,4 +1,4 @@
-import { fibonacci } from '../recursion/fibonacci';
+import { fibonacci } from "./fibonacci";
 
 test('fibonacci', () => {
   const expectedSequence = [1, 1, 2, 3, 5, 8, 13];
