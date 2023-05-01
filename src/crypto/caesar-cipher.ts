@@ -1,6 +1,6 @@
 import { mod } from './mod';
 
-// Alphabet is 26 upper cased latin letters. Char codes from 65 to 90
+// Alphabet is 26 upper-cased latin letters. Char codes from 65 to 90
 const CHAR_CODE_FROM = 65;
 const ALPHABET_SIZE = 26;
 
