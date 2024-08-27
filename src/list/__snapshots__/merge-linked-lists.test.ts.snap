@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`merge linked lists 1`] = `
+ListNode {
+  "next": ListNode {
+    "next": ListNode {
+      "next": ListNode {
+        "next": ListNode {
+          "next": ListNode {
+            "next": null,
+            "val": 4,
+          },
+          "val": 4,
+        },
+        "val": 3,
+      },
+      "val": 2,
+    },
+    "val": 1,
+  },
+  "val": 1,
+}
+`;
