@@ -1,4 +1,4 @@
-import { areParenthesisValid } from './areParenthesisValid.mjs';
+import { areParenthesisValid } from './are-parenthesis-valid.mjs';
 import { describe, expect, test } from 'vitest';
 
 describe('parenthesis', () => {

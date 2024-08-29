@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "npx vitest"
+    "test": "npx vitest",
+    "generate-readme": "node generate-structure.mjs"
   },
-  "author": "",
+  "author": "https://github.com/kubk",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^22.5.1",
