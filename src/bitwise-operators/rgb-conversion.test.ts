@@ -1,4 +1,5 @@
 import { numToRgb, rgbToNum } from './rgb-conversion';
+import { describe, expect, it } from 'vitest';
 
 describe('RGB pack / unpack', () => {
   it('num to rgb', () => {

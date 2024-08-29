@@ -9,18 +9,18 @@ export const partitions = (
   answers: number[][] = []
 ) => {
   if (n <= 0) {
-    answers.push(currentAnswer.slice())
+    answers.push(currentAnswer.slice());
     return answers;
   }
 
   for (let i = m; i > 0; i--) {
     const nextN = n - i;
     if (nextN >= 0) {
-      currentAnswer.push(i)
-      partitions(nextN, m, currentAnswer, answers)
-      currentAnswer.pop()
+      currentAnswer.push(i);
+      partitions(nextN, m, currentAnswer, answers);
+      currentAnswer.pop();
     }
   }
 
-  return answers
-}
+  return answers;
+};

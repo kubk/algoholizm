@@ -1,4 +1,5 @@
 import { linearSearch } from './linear-search';
+import { describe, expect, it } from 'vitest';
 
 describe('LinearSearch', () => {
   it('should find an item', () => {

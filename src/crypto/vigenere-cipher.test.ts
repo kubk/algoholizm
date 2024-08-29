@@ -1,4 +1,5 @@
 import { vigenereCipherDecrypt, vigenereCipherEncrypt } from './vigenere-cipher';
+import { describe, expect, it } from 'vitest';
 
 describe('Vigener cipher', () => {
   it('encrypt / decrypt', () => {

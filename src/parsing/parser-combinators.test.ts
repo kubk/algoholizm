@@ -1,5 +1,4 @@
 import {
-  allExcept,
   any,
   defer,
   NullablePattern,
@@ -8,6 +7,7 @@ import {
   sequence,
   text,
 } from './parser-combinators';
+import { expect, test } from 'vitest';
 
 const clearAndJoinArrayIntoString = (array: string[]) =>
   array
@@ -150,5 +150,5 @@ test('integration - simple HTML parser', () => {
 
   const ast = html('<div><h1>aaa</h1><p>bb</p><div><span>c</span></div></div>', 0)!.result;
 
-  expect(ast).toMatchSnapshot()
+  expect(ast).toMatchSnapshot();
 });

@@ -1,4 +1,5 @@
 import { canSum } from './can-sum';
+import { expect, test } from 'vitest';
 
 test('can sum', () => {
   expect(canSum(7, [5, 3, 4, 7])).toBe(true);

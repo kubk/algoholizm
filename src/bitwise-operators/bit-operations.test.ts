@@ -1,4 +1,5 @@
 import { clearBit, countBits, isEven, isOdd, setBit, toggleBit } from './bit-operations';
+import { describe, expect, it } from 'vitest';
 
 describe('bit operations', () => {
   it('setBit', () => {

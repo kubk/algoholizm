@@ -5,15 +5,15 @@ export const coinChange = (
   currentAnswer: number[] = []
 ) => {
   if (n === 0) {
-    answers.push(currentAnswer.slice())
+    answers.push(currentAnswer.slice());
   }
 
   for (let i = 0; i < coins.length; i++) {
-    const nextN = n - coins[i]
+    const nextN = n - coins[i];
     if (nextN >= 0) {
-      currentAnswer.push(coins[i])
-       coinChange(nextN, coins, answers, currentAnswer)
-      currentAnswer.pop()
+      currentAnswer.push(coins[i]);
+      coinChange(nextN, coins, answers, currentAnswer);
+      currentAnswer.pop();
     }
   }
 

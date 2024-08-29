@@ -1,6 +1,6 @@
 export const canSum = (n: number, from: number[], cache: Record<number, boolean> = {}): boolean => {
   if (n in cache) {
-    return cache[n]
+    return cache[n];
   }
   if (n === 0) {
     return true;

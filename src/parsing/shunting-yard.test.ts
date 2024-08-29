@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { shuntingYard } from './shunting-yard';
 
 describe('Shunting Yard', () => {

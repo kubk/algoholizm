@@ -1,4 +1,5 @@
 import { evaluateReversePolishNotation } from './reverse-polish-notation-calculator';
+import { describe, expect, it } from 'vitest';
 
 describe('RPN calculator', () => {
   it('Should parse numbers', () => {

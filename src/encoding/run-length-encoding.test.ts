@@ -1,4 +1,5 @@
 import { runLengthEncoding } from './run-length-encoding';
+import { describe, expect, it } from 'vitest';
 
 describe('runLengthEncoding', function () {
   it('should work for some examples', function () {

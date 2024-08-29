@@ -1,4 +1,5 @@
 import { fibonacci } from './fibonacci';
+import { describe, expect, it } from 'vitest';
 
 describe('fibonacci', () => {
   it('should calculate n-th fibonacci number in a sequence', () => {

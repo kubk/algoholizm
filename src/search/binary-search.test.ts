@@ -1,4 +1,5 @@
 import { binarySearch } from './binary-search';
+import { describe, expect, it } from 'vitest';
 
 type TestCase = {
   needle: number;

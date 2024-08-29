@@ -10,7 +10,7 @@ export type NullablePattern<T extends PatternResultType> = (
 
 export const text = (
   match: string,
-  transform: (value: string) => any = (value) => value,
+  transform: (value: string) => any = (value) => value
 ): NullablePattern<string> => {
   return (text, startPosition) => {
     const index = text.substring(startPosition).indexOf(match);
@@ -19,7 +19,7 @@ export const text = (
     }
     return null;
   };
-}
+};
 
 export const oneOrMore = <T extends PatternResultType>(
   pattern: NullablePattern<T>,

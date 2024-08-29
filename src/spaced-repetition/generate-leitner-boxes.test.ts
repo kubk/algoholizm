@@ -1,4 +1,5 @@
 import { generateLeitnerBoxes } from './generate-leitner-boxes';
+import { expect, test } from 'vitest';
 
 test('generates leitner boxes for intervals 1, 2, 7', () => {
   const boxes = [1, 2, 7];

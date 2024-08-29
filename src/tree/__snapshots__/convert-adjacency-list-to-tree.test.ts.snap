@@ -1,4 +1,78 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`convertAdjacencyListToTree > converts null|string ids 1`] = `
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [],
+            "id": "3",
+            "name": "Phonedo - A - A",
+          },
+          {
+            "children": [],
+            "id": "7",
+            "name": "Phonedo - A - B",
+          },
+        ],
+        "id": "2",
+        "name": "Phonedo - A",
+      },
+      {
+        "children": [],
+        "id": "4",
+        "name": "Phonedo - B",
+      },
+      {
+        "children": [],
+        "id": "6",
+        "name": "Phonedo - C",
+      },
+    ],
+    "id": "1",
+    "name": "Phonedo",
+  },
+]
+`;
+
+exports[`convertAdjacencyListToTree > converts number ids 1`] = `
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [],
+            "id": 3,
+            "name": "Phonedo - A - A",
+          },
+          {
+            "children": [],
+            "id": 7,
+            "name": "Phonedo - A - B",
+          },
+        ],
+        "id": 2,
+        "name": "Phonedo - A",
+      },
+      {
+        "children": [],
+        "id": 4,
+        "name": "Phonedo - B",
+      },
+      {
+        "children": [],
+        "id": 6,
+        "name": "Phonedo - C",
+      },
+    ],
+    "id": 1,
+    "name": "Phonedo",
+  },
+]
+`;
 
 exports[`convertAdjacencyListToTree converts null|string ids 1`] = `
 Array [

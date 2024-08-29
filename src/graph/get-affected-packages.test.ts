@@ -1,4 +1,5 @@
 import { getAffectedPackages, Vertex } from './get-affected-packages';
+import { expect, test } from 'vitest';
 
 test('get affected packages', () => {
   // A -> B

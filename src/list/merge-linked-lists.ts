@@ -20,7 +20,7 @@ const listNodeToArray = (n: ListNode) => {
   return result;
 };
 
-const arrayToListNode = (arr: number[]): ListNode|null => {
+const arrayToListNode = (arr: number[]): ListNode | null => {
   if (arr.length === 0) {
     return null;
   }
@@ -42,7 +42,7 @@ const arrayToListNode = (arr: number[]): ListNode|null => {
   return first;
 };
 
-export const mergeTwoLists = (list1: ListNode | null, list2: ListNode | null): ListNode|null => {
+export const mergeTwoLists = (list1: ListNode | null, list2: ListNode | null): ListNode | null => {
   const arr1 = list1 ? listNodeToArray(list1) : [];
   const arr2 = list2 ? listNodeToArray(list2) : [];
   const result = arr1.concat(arr2).sort((a, b) => a - b);

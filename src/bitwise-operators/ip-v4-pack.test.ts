@@ -1,4 +1,5 @@
 import { ipV4Pack, ipV4Unpack } from './ip-v4-pack';
+import { describe, expect, it } from 'vitest';
 
 describe('IP v4 pack / unpack', () => {
   it('packs / unpacks IP', () => {

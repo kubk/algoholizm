@@ -1,4 +1,5 @@
 import { solveGraph } from './solve-graph';
+import { describe, expect, it } from 'vitest';
 
 describe('Simple graph with 1 arc', () => {
   const graph = [{ start: 'a', end: 'b' }];

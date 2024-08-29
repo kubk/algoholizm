@@ -1,4 +1,5 @@
 import { generateLeitnerCliSchedule } from './generate-leitner-cli-schedule';
+import { expect, test } from 'vitest';
 
 test('generates leitner schedule in CLI', () => {
   expect(generateLeitnerCliSchedule([1, 2], 3)).toStrictEqual(

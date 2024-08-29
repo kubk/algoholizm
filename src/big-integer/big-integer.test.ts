@@ -1,4 +1,5 @@
 import { BigInteger } from './big-integer';
+import { expect, test } from 'vitest';
 
 test('BigInteger', () => {
   expect(new BigInteger([2, 4, 3]).add(new BigInteger([5, 6, 4])).list).toStrictEqual([8, 0, 7]);

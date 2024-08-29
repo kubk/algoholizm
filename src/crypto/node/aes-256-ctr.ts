@@ -29,5 +29,4 @@ const decrypt = (ciphertext: string, iv: string, key: Buffer) => {
 export const aes256ctr = {
   decrypt,
   encrypt,
-}
-
+};

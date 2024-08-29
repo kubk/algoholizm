@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { bubbleSort } from './bubble-sort';
 
 describe('BubbleSort', () => {

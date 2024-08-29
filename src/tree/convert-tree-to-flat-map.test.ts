@@ -1,4 +1,5 @@
 import { convertTreeToFlatMap } from './convert-tree-to-flat-map';
+import { describe, expect, it } from 'vitest';
 
 describe('convertTreeToFlatMap', () => {
   it('should create flatten map from a tree', () => {

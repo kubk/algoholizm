@@ -1,4 +1,5 @@
 import { cyclicRotation } from './cyclic-rotation';
+import { expect, test } from 'vitest';
 
 test('cyclic rotation', () => {
   expect(cyclicRotation([1, 2, 3], 1)).toStrictEqual([3, 1, 2]);

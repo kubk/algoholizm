@@ -1,4 +1,5 @@
 import { gridPossiblePaths } from './grid-possible-paths';
+import { expect, test } from 'vitest';
 
 test('possible paths', () => {
   expect(gridPossiblePaths(1, 1)).toBe(1);

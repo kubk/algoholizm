@@ -1,4 +1,5 @@
 import { permutations } from './permutations';
+import { expect, test } from 'vitest';
 
 test('permutations', () => {
   expect(permutations([0, 1])).toEqual([

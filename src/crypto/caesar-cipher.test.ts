@@ -1,4 +1,5 @@
 import { caesarCipherDecrypt, caesarCipherEncrypt } from './caesar-cipher';
+import { describe, expect, it } from 'vitest';
 
 describe('Caesar cipher', () => {
   it('decrypt / encrypt', () => {

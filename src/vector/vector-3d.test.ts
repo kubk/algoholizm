@@ -1,4 +1,5 @@
 import { Point3D, Vector3D } from './vector-3d';
+import { describe, expect, it } from 'vitest';
 
 describe('Vector 3D', () => {
   it('can be created', () => {

@@ -1,4 +1,5 @@
 import { sumUpTo } from './sum-up-to';
+import { describe, expect, it } from 'vitest';
 
 describe('sumUpTo', () => {
   it('calculates sum', () => {

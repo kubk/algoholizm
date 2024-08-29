@@ -1,4 +1,5 @@
 import { BitwiseNumber } from './bitwise-number';
+import { describe, expect, it } from 'vitest';
 
 describe('BitwiseNumber', () => {
   it('adds 1 + 0', () => {

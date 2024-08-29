@@ -1,4 +1,5 @@
 import { Point2D, Vector2D } from './vector-2d';
+import { describe, expect, it } from 'vitest';
 
 describe('Vector 2D', () => {
   it('can be created', () => {

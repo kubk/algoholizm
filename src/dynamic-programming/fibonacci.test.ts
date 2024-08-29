@@ -1,4 +1,5 @@
-import { fibonacci } from "./fibonacci";
+import { fibonacci } from './fibonacci';
+import { expect, test } from 'vitest';
 
 test('fibonacci', () => {
   const expectedSequence = [1, 1, 2, 3, 5, 8, 13];
@@ -6,4 +7,4 @@ test('fibonacci', () => {
   for (let i = 1; i < expectedSequence.length; i++) {
     expect(fibonacci(i)).toBe(expectedSequence[i - 1]);
   }
-})
+});

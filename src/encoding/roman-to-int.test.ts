@@ -1,4 +1,5 @@
 import { romanToInt } from './roman-to-int';
+import { expect, test } from 'vitest';
 
 test('roman to int', () => {
   // Sum

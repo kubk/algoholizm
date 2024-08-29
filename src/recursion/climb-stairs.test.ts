@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest';
 import { climbStairs } from './climb-stairs';
 
 test('climb stairs', () => {

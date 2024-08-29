@@ -1,4 +1,5 @@
 import { generateLeitnerMatrixSchedule } from './generate-leitner-matrix-schedule';
+import { expect, test } from 'vitest';
 
 test('generates a leitner schedule in a form of matrix', () => {
   expect(generateLeitnerMatrixSchedule([1, 2], 3)).toStrictEqual([

@@ -1,4 +1,5 @@
 import { vernamCipherDecrypt, vernamCipherEncrypt } from './vernam-cipher';
+import { describe, expect, it } from 'vitest';
 
 describe('Vernam cipher', () => {
   it('decrypt / encrypt', () => {

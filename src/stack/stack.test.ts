@@ -1,4 +1,5 @@
 import { Stack, StackOverflow } from './stack';
+import { describe, expect, it } from 'vitest';
 
 describe('Stack', () => {
   it('is empty by default', () => {
