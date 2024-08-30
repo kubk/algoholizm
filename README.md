@@ -28,6 +28,7 @@ Algorithms and Data Structures implemented in TypeScript using TDD.
   - [roman-to-int.ts](src/encoding/roman-to-int.ts) + [tests](src/encoding/roman-to-int.test.ts)
   - [run-length-encoding.ts](src/encoding/run-length-encoding.ts) + [tests](src/encoding/run-length-encoding.test.ts)
 - 📁 [graph](src/graph)
+  - [find-judge.ts](src/graph/find-judge.ts) + [tests](src/graph/find-judge.test.ts)
   - [get-affected-packages.ts](src/graph/get-affected-packages.ts) + [tests](src/graph/get-affected-packages.test.ts)
   - [solve-graph.ts](src/graph/solve-graph.ts) + [tests](src/graph/solve-graph.test.ts)
 - 📁 [iteration](src/iteration)

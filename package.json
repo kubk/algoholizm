@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "test": "npx vitest",
+    "typecheck": "npx tsc --noEmit",
     "generate-readme": "node generate-structure.mjs"
   },
   "author": "https://github.com/kubk",
