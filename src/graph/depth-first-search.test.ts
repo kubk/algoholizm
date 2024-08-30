@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { dfs } from './dfs';
+import { depthFirstSearch } from './depth-first-search';
 
 test('dfs', () => {
   const graph = new Map([
@@ -9,7 +9,7 @@ test('dfs', () => {
   ]);
 
   const result: string[] = [];
-  dfs(graph, 'a', null, (v) => {
+  depthFirstSearch(graph, 'a', null, (v) => {
     result.push(v);
   });
 
@@ -25,7 +25,7 @@ test('dfs stop', () => {
   ]);
 
   const result: string[] = [];
-  dfs(graph, 'a', 'd', (v) => {
+  depthFirstSearch(graph, 'a', 'd', (v) => {
     result.push(v);
   });
 
@@ -40,7 +40,7 @@ test('dfs bidirectional - no end', () => {
   ]);
 
   const result: string[] = [];
-  dfs(graph, 'a', null, (v) => {
+  depthFirstSearch(graph, 'a', null, (v) => {
     result.push(v);
   });
   expect(result).toEqual(['a', 'b', 'c']);
@@ -53,6 +53,6 @@ test('dfs bidirectional - with end', () => {
     ['a', new Set(['c'])],
   ]);
 
-  const result = dfs(graph, 'a', 'c');
+  const result = depthFirstSearch(graph, 'a', 'c');
   expect(result).toBeTruthy();
 });

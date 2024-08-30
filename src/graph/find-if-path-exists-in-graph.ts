@@ -1,5 +1,5 @@
 import { adjacencyListToGraph } from './adjacency-list-to-graph';
-import { dfs } from './dfs';
+import { depthFirstSearch } from './depth-first-search';
 
 export function findIfPathExistsInGraph(
   n: number,
@@ -8,5 +8,5 @@ export function findIfPathExistsInGraph(
   destination: number
 ): boolean {
   const graph = adjacencyListToGraph(edges, 'bidirectional');
-  return dfs(graph, source, destination);
+  return depthFirstSearch(graph, source, destination);
 }

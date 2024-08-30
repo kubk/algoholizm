@@ -1,4 +1,4 @@
-export const dfs = <T>(
+export const depthFirstSearch = <T>(
   graph: Map<T, Set<T>>,
   start: T,
   end: T | null,
