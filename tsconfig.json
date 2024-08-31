@@ -1,10 +1,14 @@
 {
   "compilerOptions": {
     "outDir": "build",
-    "module": "commonjs",
+    "module": "esnext",
     "target": "es6",
     "strict": true,
+    "types": [
+      "vitest/importMeta"
+    ],
     "skipLibCheck": true,
+    "moduleResolution": "node",
     "alwaysStrict": true,
     "lib": ["es6", "es2015"],
     "sourceMap": true

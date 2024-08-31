@@ -10,3 +10,10 @@ export const bubbleSort = (arr: number[]): number[] => {
   }
   return arr;
 };
+
+if (import.meta.vitest) {
+  const { expect, test } = import.meta.vitest;
+  test('should sort an array', () => {
+    expect(bubbleSort([4, 2, 3, 1])).toStrictEqual([1, 2, 3, 4]);
+  });
+}

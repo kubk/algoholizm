@@ -10,3 +10,21 @@ export function findIfPathExistsInGraph(
   const graph = adjacencyListToGraph(edges, 'bidirectional');
   return depthFirstSearch(graph, source, destination);
 }
+
+if (import.meta.vitest) {
+  const { test, expect } = import.meta.vitest;
+  test('find if path exists in graph', () => {
+    expect(
+      findIfPathExistsInGraph(
+        3,
+        [
+          [0, 1],
+          [1, 2],
+          [2, 0],
+        ],
+        0,
+        2
+      )
+    ).toBeTruthy();
+  });
+}

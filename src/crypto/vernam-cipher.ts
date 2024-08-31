@@ -24,3 +24,13 @@ export const vernamCipherDecrypt = (cipherText: string, key: number[]) => {
     })
     .join('');
 };
+
+if (import.meta.vitest) {
+  const { test, expect } = import.meta.vitest;
+  test('Vernam cipher - decrypt / encrypt', () => {
+    const plainText = 'attackatonce';
+    const { cipherText, key } = vernamCipherEncrypt(plainText);
+    expect(cipherText).not.toBe(plainText);
+    expect(vernamCipherDecrypt(cipherText, key)).toBe(plainText);
+  });
+}

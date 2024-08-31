@@ -24,3 +24,13 @@ export const caesarCipherDecrypt = (string: string, shiftBy: number) => {
     })
     .join('');
 };
+
+if (import.meta.vitest) {
+  const { test, expect } = import.meta.vitest;
+  test('Caesar cipher - decrypt / encrypt', () => {
+    expect(caesarCipherEncrypt('AAB', 3)).toBe('DDE');
+    expect(caesarCipherDecrypt('DDE', 3)).toBe('AAB');
+    expect(caesarCipherEncrypt('ZAB', 3)).toBe('CDE');
+    expect(caesarCipherDecrypt('CDE', 3)).toBe('ZAB');
+  });
+}

@@ -30,3 +30,11 @@ export const vigenereCipherDecrypt = (cipherText: string, key: string) => {
     })
     .join('');
 };
+
+if (import.meta.vitest) {
+  const { test, expect } = import.meta.vitest;
+  test('Vigener cipher - encrypt / decrypt', () => {
+    expect(vigenereCipherEncrypt('ATTACKATDAWN', 'LEMONLEMONLE')).toBe('LXFOPVEFRNHR');
+    expect(vigenereCipherDecrypt('LXFOPVEFRNHR', 'LEMONLEMONLE')).toBe('ATTACKATDAWN');
+  });
+}

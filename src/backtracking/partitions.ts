@@ -24,3 +24,15 @@ export const partitions = (
 
   return answers;
 };
+
+if (import.meta.vitest) {
+  const { test, expect } = import.meta.vitest;
+  test('partition', () => {
+    expect(partitions(2, 2)).toStrictEqual([[2], [1, 1]]);
+    expect(partitions(3, 2)).toStrictEqual([
+      [2, 1],
+      [1, 2],
+      [1, 1, 1],
+    ]);
+  });
+}

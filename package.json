@@ -2,6 +2,7 @@
   "name": "algoholizm",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "scripts": {
     "test": "npx vitest",
     "typecheck": "npx tsc --noEmit",
